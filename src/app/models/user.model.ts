@@ -4,5 +4,5 @@ export interface User {
     segundoApellido : string
     email : string
     telefono : string
-    _id : string
+    uid ?: string
 }

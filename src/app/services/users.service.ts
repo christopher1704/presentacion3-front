@@ -17,4 +17,19 @@ export class UsersService {
   getUser() {
     return this.http.get<User[]>(this.URL_API);
   }
+
+  createUSer(user : User){
+    return this.http.post(this.URL_API,user)
+  }
+
+  deleteUser(_id: string){
+    return this.http.delete(`${this.URL_API}/${_id}`)
+  }
+
+  putUser(user : User){
+    return this.http.put(`${this.URL_API}/${user.uid}`,user)
+  }
+
+
+
 }
