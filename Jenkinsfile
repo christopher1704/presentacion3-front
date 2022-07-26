@@ -14,9 +14,17 @@ pipeline {
     stage('Pull Request') {
       steps {
         sh 'git remote add upstream https://github.com/christopher1704/presentacion3-front.git',
-        sh 'git fetch upstream',
-        sh 'git merge upstream/dev',
-        sh 'git push',
+      }
+      steps {
+        sh 'git fetch upstream'
+      }
+      steps {
+        sh 'git merge upstream/dev'
+      }
+      steps {
+        sh 'git push'
+      }
+      steps {
         sh 'git remote rm upstream'
       }
     }
