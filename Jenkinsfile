@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Pull Request') {
       steps {
-        sh 'git remote add upstream https://github.com/christopher1704/presentacion3-front.git',
+        sh 'git remote add upstream https://github.com/christopher1704/presentacion3-front.git'
       }
       steps {
         sh 'git fetch upstream'
