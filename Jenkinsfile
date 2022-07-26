@@ -6,6 +6,8 @@ pipeline {
         sh 'echo "Hello Worlddddd"'
       }
     }
+
+    /*
     stage('Pull Main') {
       steps {
         sh 'git pull origin master'
@@ -22,6 +24,8 @@ pipeline {
         '''
       }
     }
+    */
+    
   }
 }
 
