@@ -21,6 +21,10 @@ export class UserComponent implements OnInit {
     telefono :""
   }
 
+  check = 0
+
+  deleted = false
+
   ngOnInit(): void {
     this.getUsers();
   }
@@ -47,7 +51,6 @@ export class UserComponent implements OnInit {
         },
         err => console.log(err) 
       )
-      
     }else{
       this.userService.createUSer(form.value).subscribe(
         res => {
@@ -57,6 +60,7 @@ export class UserComponent implements OnInit {
         err => console.log(err)  
       )
     }
+    this.check = 1
   }
 
   deleteUser(id : string){
@@ -66,6 +70,8 @@ export class UserComponent implements OnInit {
     res => this.getUsers(),
     err => console.log(err)
      )
+
+    this.deleted = true
   }
 
   editUser(user : User){
