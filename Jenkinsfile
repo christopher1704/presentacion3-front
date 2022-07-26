@@ -11,5 +11,10 @@ pipeline {
         sh 'git pull origin master'
       }
     }
+    stage('Push Main') {
+      steps {
+        sh 'git push origin master'
+      }
+    }
   }
 }
