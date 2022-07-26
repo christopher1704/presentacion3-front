@@ -11,6 +11,7 @@ pipeline {
         sh 'git pull origin master'
       }
     }
+    /*
     stage('Pull Request') {
       steps {
         sh '''
@@ -22,6 +23,9 @@ pipeline {
         '''
       }
     }
+    */
+    
   }
 }
 }
+
