@@ -6,5 +6,10 @@ pipeline {
         sh 'echo "Hello Worlddd"'
       }
     }
+    stage('Pull Main') {
+      steps {
+        sh 'git pull'
+      }
+    }
   }
 }
